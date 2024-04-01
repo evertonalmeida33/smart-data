@@ -10,4 +10,3 @@ Funcionalidade: Cadastro de setor
   Cenario: Cadastrar setor com sucesso
     Quando cadastrar o setor "cadastrar_setor"
     Então devo ver a mensagem "Sucesso: Setor adicionado com sucesso"
-
