@@ -1,0 +1,72 @@
+AllCops:
+  NewCops: disable
+  SuggestExtensions: false
+
+#Verifica o comprimento máximo de colunas numa linha, máximo padrão (120) | manter 160
+Layout/LineLength:
+  Exclude:
+    - 'features/support/factories/*.rb'
+  Max: 160
+
+#Verifica se excede o tamanho máximo da assinatura dos métodos, máximo padrão (17) | manter desabilitado
+Metrics/AbcSize:
+  Enabled: false
+
+#Verifica se excede o tamanho máximo do bloco de código, máximo padrão (25) | manter máximo 100
+Metrics/BlockLength:
+  Exclude:
+    - 'features/support/factories/*.rb'
+  Max: 100
+
+#Verifica se excede o número de linhas de uma classe, máximo padrão (100) | manter desabilitado
+Metrics/ClassLength:
+  Enabled: false
+
+#Verifica se excede o numero da complexidade ciclomatica (numero de caminhos linearmente independentes através de um método) | máximo padrão (7) - manter o padrão
+Metrics/CyclomaticComplexity:
+  Max: 7
+
+#Verifica se excede o tamanho máximo do bloco dentro do método, máximo padrão (10) | manter 20
+Metrics/MethodLength:
+  Exclude:
+    - 'features/support/models/.rb'
+    - 'features/support/libs/.rb'
+    - 'features/support/helpers.rb'
+    - 'features/support/pages/*.rb'
+    - 'features/support/models/*.rb'
+  Max: 20
+
+#Verifica se excede o tamanho máximo de um modulo, máximo padrão (100) | manter desabilitado
+Metrics/ModuleLength:
+  Enabled: false
+
+#Verifica a existência de caracteres não-ascii em nomes de identificadores e constantes, valor default = Enabled: true | manter desabilitado
+Naming/AsciiIdentifiers:
+  Enabled: false
+
+#Verifica se os nomes usam os estilo configurado, valor default = snake_case | manter desabilitado
+Naming/MethodName:
+  Enabled: false
+
+#Verifica a falta de documentação de nível superior de classes e módulos | manter desabilitada
+Style/Documentation:
+  Enabled: false
+
+#Manter desabilitada
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+#Manter desabilitada
+Style/SingleArgumentDig:
+  Enabled: false
+
+#features/support/env.rb:12:1: C: Style/MixinUsage: include is used at the top level. Use inside class or module.include Helper
+Style/MixinUsage:
+  Enabled: false
+
+# Desativei porque pede para alterar o expect para Style/NumericPredicate: Use be.positive? instead of be > 0. e quando altera quebra o teste
+Style/NumericPredicate:
+ Enabled: false
+
+Lint/MissingSuper:
+  Enabled: false

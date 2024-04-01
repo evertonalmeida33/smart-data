@@ -1,0 +1,20 @@
+---
+default: -p chrome -p bdd -p hml -p env_hml -p json -p html --publish-quiet
+ci: -p chrome_headless -p bdd -p hml -p env_hml -p json -p html -p xml --publish-quiet
+
+dev: ENV_TYPE=dev
+env_dev: ENV_PREFIX=dev
+hml: ENV_TYPE=hml
+env_hml: ENV_PREFIX=hml
+
+firefox: BROWSER=firefox
+firefox_headless: BROWSER=firefox_headless
+chrome: BROWSER=chrome
+chrome_headless: BROWSER=chrome_headless
+
+html: --format html --out=report/index.html
+json: --format json --out=report/report.json
+xml: --format junit --out=report/junit
+
+bdd: --format pretty
+progress: --format progress

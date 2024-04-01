@@ -1,0 +1,14 @@
+---
+# Elementos Pages
+
+logo: '.logo-lg'
+
+#Login:
+usuario: 'input[name="username"]' 
+senha: 'input[name="password"]'
+
+#Cadastro de sellers
+btnNovoSetor: '#new-setor'
+nomeSetor: '#id_setor-nome'
+codIntegracao: '#id_setor-codigo_integrador'
+
